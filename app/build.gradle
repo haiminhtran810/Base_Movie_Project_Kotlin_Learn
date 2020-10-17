@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion 30
@@ -57,6 +58,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -161,5 +165,11 @@ dependencies {
     implementation deps.exoplayer.core
     implementation deps.exoplayer.dash
     implementation deps.exoplayer.ui
+
+    // Hilt
+    implementation deps.hilt.android
+    implementation deps.hilt.viewmodel
+    implementation deps.hilt.viewModelCompiler
+    kapt deps.hilt.compiler
 
 }

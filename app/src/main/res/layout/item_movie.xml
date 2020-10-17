@@ -10,9 +10,8 @@
             type="learn.htm.projectlearn.model.Movie" />
     </data>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
@@ -42,8 +41,8 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/imageViewMovie"
                         imageUrl="@{item.imageLink}"
-                        android:layout_width="@dimen/dp_160"
-                        android:layout_height="@dimen/dp_193"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="@dimen/dp_216"
                         android:scaleType="centerCrop"
                         tools:src="@drawable/ic_no_image" />
                 </androidx.cardview.widget.CardView>
@@ -72,6 +71,7 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginBottom="@dimen/dp_15"
                     android:padding="@dimen/dp_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/cardViewImage"
                     app:layout_constraintStart_toStartOf="@id/cardViewImage"
                     app:layout_constraintTop_toBottomOf="@id/textTitleMovie">

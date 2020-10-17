@@ -14,9 +14,14 @@ import learn.htm.projectlearn.data.remote.api.MovieAPI
 import learn.htm.projectlearn.data.remote.repository.MovieRepository
 import learn.htm.projectlearn.model.Movie
 import learn.htm.projectlearn.model.Videos
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class MovieRepositoryImpl(private val movieAPI: MovieAPI, private val movieDao: MovieDao) :
-    MovieRepository {
+@Singleton
+class MovieRepositoryImpl @Inject constructor(
+    private val movieAPI: MovieAPI,
+    private val movieDao: MovieDao
+) : MovieRepository {
 
     override fun getMovieListPopular(): Flowable<PagingData<Movie>> {
         return Pager(

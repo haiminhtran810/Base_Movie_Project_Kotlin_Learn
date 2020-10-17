@@ -3,18 +3,20 @@ package learn.htm.projectlearn.ui.home
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 import learn.htm.projectlearn.R
 import learn.htm.projectlearn.base.BaseFragment
 import learn.htm.projectlearn.databinding.FragmentHomeBinding
 import learn.htm.projectlearn.model.Movie
 import learn.htm.projectlearn.ui.home.adapter.HomeViewPagerAdapter
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
 
-    override val viewModel: HomeViewModel by viewModel()
+    override val viewModel: HomeViewModel by viewModels()
 
     override val layoutId: Int
         get() = R.layout.fragment_home

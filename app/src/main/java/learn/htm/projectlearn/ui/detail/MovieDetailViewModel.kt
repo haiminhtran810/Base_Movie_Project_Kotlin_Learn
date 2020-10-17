@@ -1,5 +1,6 @@
 package learn.htm.projectlearn.ui.detail
 
+import androidx.hilt.lifecycle.ViewModelInject
 import learn.htm.projectlearn.base.BaseViewModel
 import learn.htm.projectlearn.data.remote.repository.MovieRepository
 import learn.htm.projectlearn.model.Movie
@@ -7,7 +8,7 @@ import learn.htm.projectlearn.model.Videos
 import learn.htm.projectlearn.utils.RxUtils
 import learn.htm.projectlearn.utils.SingleLiveData
 
-class MovieDetailViewModel(private val movieRepository: MovieRepository) :
+class MovieDetailViewModel @ViewModelInject constructor(private val movieRepository: MovieRepository) :
     BaseViewModel() {
     val movie = SingleLiveData<Movie>()
     val insertSuccess = SingleLiveData<Unit>()

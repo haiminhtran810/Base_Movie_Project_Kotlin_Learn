@@ -7,6 +7,7 @@ import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.PlaybackPreparer
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.StyledPlayerControlView
+import dagger.hilt.android.AndroidEntryPoint
 import learn.htm.projectlearn.BuildConfig
 import learn.htm.projectlearn.R
 import learn.htm.projectlearn.base.BaseFragment
@@ -22,6 +23,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 * UI: https://hayko.tv/zelpro.id/CCV_uptp9ON
 * */
 
+@AndroidEntryPoint
 class MovieDetailFragment : BaseFragment<FragmentMovieDetailBinding, MovieDetailViewModel>(),
     PlaybackPreparer, StyledPlayerControlView.VisibilityListener {
 
@@ -72,7 +74,8 @@ class MovieDetailFragment : BaseFragment<FragmentMovieDetailBinding, MovieDetail
 
     private fun releasePlayer() {
         player?.apply {
-
+            pause()
+            release()
         }
     }
 
@@ -93,6 +96,7 @@ class MovieDetailFragment : BaseFragment<FragmentMovieDetailBinding, MovieDetail
     }
 
     override fun onDestroy() {
+        releasePlayer()
         super.onDestroy()
     }
 

@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.paging.LoadState
+import dagger.hilt.android.AndroidEntryPoint
 import learn.htm.projectlearn.R
 import learn.htm.projectlearn.base.BaseFragment
 import learn.htm.projectlearn.databinding.FragmentPopularBinding
@@ -13,6 +14,7 @@ import learn.htm.projectlearn.model.Movie
 import learn.htm.projectlearn.ui.home.HomeFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class PopularFragment : BaseFragment<FragmentPopularBinding, PopularViewModel>() {
 
     override val viewModel: PopularViewModel by viewModel()

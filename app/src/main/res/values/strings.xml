@@ -19,4 +19,7 @@
     <string name="network_vpn">Network VPN </string>
     <string name="network_lost">No network</string>
 
+    <!-- Exo-->
+    <string name="exo_download_notification_channel_name">Downloads</string>
+
 </resources>

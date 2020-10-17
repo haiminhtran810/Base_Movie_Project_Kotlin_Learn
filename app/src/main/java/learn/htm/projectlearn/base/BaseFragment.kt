@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import dagger.hilt.android.AndroidEntryPoint
 import learn.htm.projectlearn.BR
 import learn.htm.projectlearn.R
 import learn.htm.projectlearn.extension.showDialog

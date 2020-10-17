@@ -30,12 +30,21 @@ versions.glide = "4.11.0"
 versions.transformations = "4.0.1"
 versions.datastore = "1.0.0-alpha01"
 versions.exoplayer = "2.12.0"
+versions.hilt = "2.28-alpha"
 ext.versions = versions
 
 def kotlin = [:]
 kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin_version"
 kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin_version"
 deps.kotlin = kotlin
+
+def hilt = [:]
+hilt.compiler = "com.google.dagger:hilt-android-compiler:$versions.hilt"
+hilt.android = "com.google.dagger:hilt-android:$versions.hilt"
+hilt.plugin = "com.google.dagger:hilt-android-gradle-plugin:$versions.hilt"
+hilt.viewmodel = "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01"
+hilt.viewModelCompiler = "androidx.hilt:hilt-compiler:1.0.0-alpha01"
+deps.hilt = hilt
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 
@@ -123,14 +132,14 @@ deps.glide = glide
 
 def datastore = [:]
 datastore.preferences = "androidx.datastore:datastore-preferences:$versions.datastore"
-datastore.proto  = "androidx.datastore:datastore-core:$versions.datastore"
+datastore.proto = "androidx.datastore:datastore-core:$versions.datastore"
 deps.datastore = datastore
 
 def exoplayer = [:]
 exoplayer.exoplayer = "com.google.android.exoplayer:exoplayer:$versions.exoplayer"
-exoplayer.core  = "com.google.android.exoplayer:exoplayer-core:$versions.exoplayer"
-exoplayer.dash  = "com.google.android.exoplayer:exoplayer-dash:$versions.exoplayer"
-exoplayer.ui  = "com.google.android.exoplayer:exoplayer-ui:$versions.exoplayer"
+exoplayer.core = "com.google.android.exoplayer:exoplayer-core:$versions.exoplayer"
+exoplayer.dash = "com.google.android.exoplayer:exoplayer-dash:$versions.exoplayer"
+exoplayer.ui = "com.google.android.exoplayer:exoplayer-ui:$versions.exoplayer"
 deps.exoplayer = exoplayer
 
 deps.timber = "com.jakewharton.timber:timber:$versions.timber"

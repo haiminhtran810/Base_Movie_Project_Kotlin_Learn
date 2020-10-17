@@ -6,8 +6,10 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import dagger.hilt.android.AndroidEntryPoint
 import learn.htm.projectlearn.BR
 
+@AndroidEntryPoint
 abstract class BaseActivity<viewDataBinding : ViewDataBinding, viewModel : BaseViewModel>() :
     AppCompatActivity() {
 

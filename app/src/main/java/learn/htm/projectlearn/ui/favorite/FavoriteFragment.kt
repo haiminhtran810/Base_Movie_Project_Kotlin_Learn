@@ -3,6 +3,7 @@ package learn.htm.projectlearn.ui.favorite
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
+import dagger.hilt.android.AndroidEntryPoint
 import learn.htm.projectlearn.R
 import learn.htm.projectlearn.base.BaseFragment
 import learn.htm.projectlearn.databinding.FragmentFavoriteBinding
@@ -11,6 +12,7 @@ import learn.htm.projectlearn.ui.home.HomeFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class FavoriteFragment : BaseFragment<FragmentFavoriteBinding, FavoriteViewModel>() {
     private val shareViewModel: ShareViewModel by sharedViewModel()
 

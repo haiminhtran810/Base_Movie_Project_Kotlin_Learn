@@ -3,8 +3,10 @@
     package="learn.htm.projectlearn">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="Manifest.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".MovieApplication"
@@ -28,6 +30,7 @@
             android:name=".service.MusicPlayService"
             android:exported="false"
             android:foregroundServiceType="location|camera|microphone" />
+
     </application>
 
 </manifest>

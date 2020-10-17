@@ -1,4 +1,5 @@
 package learn.htm.projectlearn.data.local.pref
 
-class AppPrefs : PrefHelper {
-}
+import javax.inject.Inject
+
+class AppPrefs @Inject constructor() : PrefHelper
